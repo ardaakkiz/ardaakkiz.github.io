@@ -4,7 +4,9 @@
         <meta charset="UTF-8">
         <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> --> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Ali Arda Akkiz | Personal Portfolio Page</title>
+        <meta name="description" content="Portfolio page of Ali Arda Akkiz. Electrical & Electronics Engineer | Control Engineer | Software Engineer">
+        <meta name="keywords" content="electrical, electronics, software, engineer, talent, control, web, development, freelancer">
+        <title>Ali Arda Akkiz | Portfolio</title>
 
         <link rel="stylesheet" href="styles.css">
 
@@ -23,6 +25,8 @@
                 <a href="#about">About</a>
                 <a href="#education">Education</a>
                 <a href="#skills">Skills</a>
+                <a href="#certificates">Certificates</a>
+                <a href="#portfolio">Portfolio</a>
                 <a href="#contact">Contact</a>
 
                 <span class="active-nav"></span>
@@ -34,25 +38,26 @@
         <section class="home show-animate" id="home">
             <div class="home-content">
                 <h1>Hi I'm <span>Ali Arda Akkız</span><span class="animate" style="--i:2;"></span></h1>
-                <div class="text-animate">
+                <!-- <div class="text-animate">
                     <h3>Software Developer</h3>
                     <span class="animate" style="--i:3;"></span>
-                </div>
+                </div> -->
+                <h3><span class="multiple-text"></span></h3>
+                <span class="animate" style="--i:3;"></span>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, sequi, deserunt impedit aspernatur accusantium 
                     quibusdam corporis quae molestias consequuntur pariatur obcaecati iure aliquid adipisci doloribus eius dolor.
                     <span class="animate" style="--i:4;"></span>
                 </p>
                 <div class="btn-box">
-                    <a href="#" class="btn">Hire Me</a>
-                    <a href="#" class="btn">Let's Talk</a>
+                    <a href="#contact" class="btn">Hire Me</a>
+                    <a href="#contact" class="btn">Let's Talk</a>
                     <span class="animate" style="--i:5;"></span>
                 </div>
             </div>
 
             <div class="home-sci">
-                <a href="#"><i class='bx bxl-linkedin' ></i></a>
-                <a href="#"><i class='bx bxl-github' ></i></a>
-                <a href="#"><i class='bx bxl-github' ></i></a>
+                <a href="https://www.linkedin.com/in/ardaakkiz/" target=”_blank”><i class='bx bxl-linkedin' ></i></a>
+                <a href="https://github.com/ardaakkiz" target=”_blank”><i class='bx bxl-github' ></i></a>
                 <span class="animate" style="--i:6;"></span>
             </div>
 
@@ -71,7 +76,7 @@
 
             <div class="about-content">
                 <h3>Software Developer!<span class="animate scroll" style="--i:3;"></span></h3>
-                <p>Although I graduated from the electrical & electronics engineering department which I have
+                <p>I graduated from the electrical & electronics engineering department which I have
                     specialized in control engineering, I also developed myself in the fields of software engineering and
                     machine learning. Moreover, I would like to state that I am extremely devoted and enthusiastic
                     about being effective and fast in business life, and I want to take the responsibility required by the
@@ -93,7 +98,7 @@
             <h2 class="heading">My <span>Journey</span><span class="animate scroll" style="--i:1;"></span></h2>
             
             <div class="education-row">
-                <div class="education-column">
+                <div class="education-column"> <!-- add kaplan international -->
                     <h3 class="title">Education<span class="animate scroll" style="--i:2;"></span></h3>
                     <div class="education-box">
 
@@ -101,7 +106,15 @@
                             <div class="content">
                                 <div class="year"><i class='bx bxs-calendar' ></i>2017 - 2022</div>
                                 <h3>Electrical & Electronics Engineering (BSc.) - Boğaziçi University</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, ipsam!</p>
+                                <p>My undergrad education in highest ranked and well-established research university of Turkey.</p>
+                            </div>
+                        </div>
+
+                        <div class="education-content">
+                            <div class="content">
+                                <div class="year"><i class='bx bxs-calendar' ></i>2018</div>
+                                <h3>English Language - Kaplan International</h3>
+                                <p>My education in Cambridge with a certificate that shows my level of English: Advanced</p>
                             </div>
                         </div>
 
@@ -109,14 +122,14 @@
                             <div class="content">
                                 <div class="year"><i class='bx bxs-calendar' ></i>2005 - 2017</div>
                                 <h3>Elementary, Middle & High School - Ted College</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, ipsam!</p>
+                                <p>I have been chosen as the most successfull student among my peers at graduation.</p>
                             </div>
                         </div>
                         <span class="animate scroll" style="--i:3;"></span>
                     </div>
                 </div>
 
-                <div class="education-column">
+                <div class="education-column"> <!-- add amazon -->
                     <h3 class="title">Experience<span class="animate scroll" style="--i:5;"></span></h3>
                     <div class="education-box">
 
@@ -140,6 +153,14 @@
                                     as technical skill trainings including Microsoft Excel and SQL. Moreover, I have
                                     established a strong foundation in cyber security including web application security and
                                     penetration testing with Kali Linux</p>
+                            </div>
+                        </div>
+
+                        <div class="education-content">
+                            <div class="content">
+                                <div class="year"><i class='bx bxs-calendar' ></i>Mar 2019 - Present</div>
+                                <h3>E-commerce Seller - Amazon</h3>
+                                <p>I have been selling on Amazon as a side hustle.</p>
                             </div>
                         </div>
                         <span class="animate scroll" style="--i:6;"></span>
@@ -204,12 +225,17 @@
                             </div>
 
                             <div class="progress">
+                                <h3>Cloud Solutions Architecture <span>70%</span></h3>
+                                <div class="bar"><span></span></div>
+                            </div>
+
+                            <div class="progress">
                                 <h3>AI & Machine Learning <span>30%</span></h3>
                                 <div class="bar"><span></span></div>
                             </div>
 
                             <div class="progress">
-                                <h3>Data Science <span>40%</span></h3>
+                                <h3>Cyber Security <span>30%</span></h3>
                                 <div class="bar"><span></span></div>
                             </div>
 
@@ -226,17 +252,62 @@
         </section>
 
         <!-- contact section design -->
+        <section id="certificates" class="certificates">
+            <h2 class="heading">My <span>Certificates</span><span class="animate scroll" style="--i:1;"></span></h2>
+        </section>
+
+        <!-- contact section design -->
+        <section id="portfolio" class="portfolio">
+            <h2 class="heading">My <span>Portfolio</span><span class="animate scroll" style="--i:1;"></span></h2>
+
+            <div class="portfolio-container">
+                <div class="portfolio-box">
+                    <img src="images/portfolio1.jpg" alt="">
+                    <div class="portfolio-layer">
+                        <h4>Graduation Project</h4>
+                        <p>Database Security via Machine Learning Algorithm Matrix Profile</p>
+                        <a href="#"><i class="bx bx-link-external"></i></a>
+                    </div>
+                </div>
+                <div class="portfolio-box">
+                    <img src="images/portfolio2.jpeg" alt="">
+                    <div class="portfolio-layer">
+                        <h4>ScraperPro</h4>
+                        <p>Chrome Extension that scrapes amazon product information with only  client-side scripting via JavaScript</p>
+                        <a href="#"><i class="bx bx-link-external"></i></a>
+                    </div>
+                </div>
+                <div class="portfolio-box">
+                    <img src="images/portfolio3.jpeg" alt="">
+                    <div class="portfolio-layer">
+                        <h4>AutoTrack</h4>
+                        <p>Automated my workflow for Amazon product tracking with Selenium via Python</p>
+                        <a href="#"><i class="bx bx-link-external"></i></a>
+                    </div>
+                </div>
+                <div class="portfolio-box">
+                    <img src="images/portfolio4.jpeg" alt="">
+                    <div class="portfolio-layer">
+                        <h4>Ig Reels Enhancer</h4>
+                        <p>Chrome extension for enhancing user experience while watching instagram reels.</p>
+                        <a href="#"><i class="bx bx-link-external"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- contact section design -->
         <section class="contact" id="contact">
             <h2 class="heading">Contact <span>Me!</span><span class="animate scroll" style="--i:1;"></span></h2>
 
             <form action="#">
                 <div class="input-box">
                     <div class="input-field">
-                        <input type="text" placeholder="Full Name" required>
+                        <input id="name" type="text" placeholder="Full Name" class="required-input" autocomplete="off">
                         <span class="focus"></span>
                     </div>
                     <div class="input-field">
-                        <input type="text" placeholder="Email Adress" required>
+                        <input id="email" type="text" placeholder="Email Adress" class="required-input" autocomplete="off">
                         <span class="focus"></span>
                     </div>
                     <span class="animate scroll" style="--i:3;"></span>
@@ -244,18 +315,18 @@
 
                 <div class="input-box">
                     <div class="input-field">
-                        <input type="number" placeholder="Mobile Number" required>
+                        <input id="phone" type="number" placeholder="Mobile Number" class="required-input" autocomplete="off">
                         <span class="focus"></span>
                     </div>
                     <div class="input-field">
-                        <input type="text" placeholder="Email Subject" required>
+                        <input id="subject" type="text" placeholder="Email Subject" class="required-input" autocomplete="off">
                         <span class="focus"></span>
                     </div>
                     <span class="animate scroll" style="--i:5;"></span>
                 </div>
 
                 <div class="text-area-field">
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                    <textarea name="" id="message" cols="30" rows="10" placeholder="Your Message" class="required-input" autocomplete="off"></textarea>
                     <span class="focus"></span>
                     <span class="animate scroll" style="--i:7;"></span>
                 </div>
@@ -280,6 +351,9 @@
             </div>
         </footer>
 
+        <script src="lib/sweetalert2@11.js"></script>
+        <script src="lib/smtp.js"></script>
+        <script src="lib/typed.min.js"></script>
         <script src="script.js"></script>
     </body>
 </html>
