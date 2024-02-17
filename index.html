@@ -8,10 +8,9 @@
         <meta name="keywords" content="electrical, electronics, software, engineer, talent, control, web, development, freelancer">
         <title>Ali Arda Akkiz | Portfolio</title>
 
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>    
+        <link href='/lib/swiper-bundle.min.css' rel='stylesheet'> 
         <link rel="stylesheet" href="styles.css">
-
-        <!-- box icons -->
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     </head>
     <body>
 
@@ -49,17 +48,17 @@
                     <span class="animate" style="--i:4;"></span>
                 </p>
                 <div class="btn-box">
-                    <a href="#contact" class="btn">Hire Me</a>
                     <a href="#contact" class="btn">Let's Talk</a>
+                    <a href="#contact" class="btn">CV</a>
                     <span class="animate" style="--i:5;"></span>
+                </div>
+                <div class="home-sci">
+                    <a href="https://www.linkedin.com/in/ardaakkiz/" target=”_blank”><i class='bx bxl-linkedin' ></i></a>
+                    <a href="https://github.com/ardaakkiz" target=”_blank”><i class='bx bxl-github' ></i></a>
+                    <span class="animate" style="--i:6;"></span>
                 </div>
             </div>
 
-            <div class="home-sci">
-                <a href="https://www.linkedin.com/in/ardaakkiz/" target=”_blank”><i class='bx bxl-linkedin' ></i></a>
-                <a href="https://github.com/ardaakkiz" target=”_blank”><i class='bx bxl-github' ></i></a>
-                <span class="animate" style="--i:6;"></span>
-            </div>
 
             <div class="home-imgHover"></div>
             <span class="animate home-img" style="--i:7;"></span>
@@ -254,6 +253,36 @@
         <!-- certificate section design -->
         <section id="certificates" class="certificates">
             <h2 class="heading">My <span>Certificates</span><span class="animate scroll" style="--i:1;"></span></h2>
+            <div class="swiper mySwiper certificates-container">
+                <div class="swiper-wrapper certificates-content">
+
+                    <div class="swiper-slide card">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="certificates/AWS.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide card">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="certificates/IBM.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide card">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="certificates/KAPLAN.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
         </section>
 
         <!-- portfolio section design -->
@@ -262,7 +291,7 @@
 
             <div class="portfolio-container">
                 <div class="portfolio-box">
-                    <img src="images/portfolio1.jpg" alt="">
+                    <img src="images/portfolio2.jpeg" alt="">
                     <div class="portfolio-layer">
                         <h4>Graduation Project</h4>
                         <p>Database Security via Machine Learning Algorithm Matrix Profile</p>
@@ -278,10 +307,26 @@
                     </div>
                 </div>
                 <div class="portfolio-box">
-                    <img src="images/portfolio3.jpeg" alt="">
+                    <img src="images/portfolio2.jpeg" alt="">
                     <div class="portfolio-layer">
                         <h4>AutoTrack</h4>
                         <p>Automated my workflow for Amazon product tracking with Selenium via Python</p>
+                        <a href="#"><i class="bx bx-link-external"></i></a>
+                    </div>
+                </div>
+                <div class="portfolio-box">
+                    <img src="images/portfolio4.jpeg" alt="">
+                    <div class="portfolio-layer">
+                        <h4>Ig Reels Enhancer</h4>
+                        <p>Chrome extension for enhancing user experience while watching instagram reels.</p>
+                        <a href="#"><i class="bx bx-link-external"></i></a>
+                    </div>
+                </div>
+                <div class="portfolio-box">
+                    <img src="images/portfolio2.jpeg" alt="">
+                    <div class="portfolio-layer">
+                        <h4>Ig Reels Enhancer</h4>
+                        <p>Chrome extension for enhancing user experience while watching instagram reels.</p>
                         <a href="#"><i class="bx bx-link-external"></i></a>
                     </div>
                 </div>
@@ -354,6 +399,7 @@
         <script src="lib/sweetalert2@11.js"></script>
         <script src="lib/smtp.js"></script>
         <script src="lib/typed.min.js"></script>
+        <script src="lib/swiper-bundle.min.js"></script>
         <script src="script.js"></script>
     </body>
 </html>

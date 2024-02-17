@@ -229,8 +229,8 @@ section {
 }
 
 .home-sci {
-    position: absolute;
-    bottom: 4rem;
+    position: relative;
+    margin-top: 3rem;
     width: 105px;
     display: flex;
     justify-content: space-between;
@@ -680,6 +680,39 @@ span {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.certificates-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6rem;
+}
+
+.swiper {
+    width: 60vw;
+    height: 60vh;
+}
+
+.certificates .card {
+    position: relative;
+    z-index: 1;
+}
+
+.certificates .card .image {
+    border-radius: .6rem;
+    height: 60vh;
+    display: flex; /* Make the image container a flex container */
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
+    overflow: hidden; /* Prevents the image from overflowing the container */
+}
+
+.certificates .card .image img {
+    height: 100%;
+    border: .4rem solid var(--main-color);
+    border-radius: 2rem;
+    object-fit: cover;
 }
 
 .contact {
