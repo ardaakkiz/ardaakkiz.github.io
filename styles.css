@@ -719,8 +719,8 @@ span {
 
 .certificates .card .image img {
     height: 100%;
-    border: .4rem solid var(--main-color);
-    border-radius: 2rem;
+    /* border: .4rem solid var(--main-color); */
+    /* border-radius: 2rem; */
     object-fit: cover;
 }
 
