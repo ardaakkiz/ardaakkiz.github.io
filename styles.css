@@ -28,6 +28,7 @@ body {
     color: var(--text-color);
 }
 
+/* ------------------------------------------ Header Section ------------------------------------------ */
 .header {
     position: fixed;
     top: 0;
@@ -84,6 +85,7 @@ section {
     padding: 10rem 9% 2rem;
 }
 
+/* ------------------------------------------ Home Section ------------------------------------------ */
 .home {
     display: flex;
     align-items: center;
@@ -288,6 +290,7 @@ section {
     opacity: .8;
 }
 
+/* ------------------------------------------ About Section ------------------------------------------ */
 .about {
     display: flex;
     justify-content: center;
@@ -365,6 +368,7 @@ span {
     background: var(--second-bg-color);
 }
 
+/* ------------------------------------------ Education Section ------------------------------------------ */
 .education {
     display: flex;
     justify-content: center;
@@ -456,6 +460,7 @@ span {
     padding-top: .5rem;
 }
 
+/* ------------------------------------------ Skills Section ------------------------------------------ */
 .skills {
     min-height: auto;  /* change to auto if something brokes*/
     padding-bottom: 7rem;
@@ -545,11 +550,11 @@ span {
 
 /* Coding Skills*/
 .skills-column:nth-child(1) .skills-content .progress:nth-child(1) .bar span {
-    width: 90%;
+    width: 100%;
 }
 
 .skills-column:nth-child(1) .skills-content .progress:nth-child(2) .bar span {
-    width: 70%;
+    width: 75%;
 }
 
 .skills-column:nth-child(1) .skills-content .progress:nth-child(3) .bar span {
@@ -566,11 +571,11 @@ span {
 
 /* Proffesional Skills*/
 .skills-column:nth-child(2) .skills-content .progress:nth-child(1) .bar span {
-    width: 90%;
+    width: 75%;
 }
 
 .skills-column:nth-child(2) .skills-content .progress:nth-child(2) .bar span {
-    width: 70%;
+    width: 90%;
 }
 
 .skills-column:nth-child(2) .skills-content .progress:nth-child(3) .bar span {
@@ -589,6 +594,7 @@ span {
     width: 90%;
 }
 
+/* ------------------------------------------ Portfolio Section ------------------------------------------ */
 .portfolio {
     min-height: auto;
     padding-bottom: 7rem;
@@ -679,6 +685,7 @@ span {
     color: var(--second-bg-color);
 }
 
+/* ------------------------------------------ Certificates Section ------------------------------------------ */
 .certificates {
     min-height: auto;
     background: var(--bg-color);
@@ -696,6 +703,7 @@ span {
     align-items: center;
     justify-content: center;
     margin-top: 6rem;
+    overflow-y: visible;
 }
 
 .swiper {
@@ -706,17 +714,58 @@ span {
 .certificates .card {
     position: relative;
     z-index: 1;
+    display: flex;
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
 }
 
 .certificates .card .image {
     border-radius: .6rem;
-    height: 60vh;
+    height: 52vh;
     display: flex; /* Make the image container a flex container */
     align-items: center; /* Vertically center the content */
     justify-content: center; /* Horizontally center the content */
-    overflow: hidden; /* Prevents the image from overflowing the container */
+}
+.certificates .card .image a {
+    height: 90%;
+}
+.certificate {
+    max-height: 90%;
+}
+.certificates .card .badges {
+    border-radius: .6rem;
+    height: 60vh;
+    display: flex; /* Make the image container a flex container */
+    flex-wrap: wrap;
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
+    gap: 10px;
+}
+.badges.aws {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.badges.aws .badge {
+    height: 20vh;
+}
+.badges.coursera {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Creates 4 columns of equal width */
+    grid-gap: 20px; /* Adjust the space between grid items */
+    justify-content: center; /* Center the grid horizontally */
+    align-items: center; /* Align the grid items vertically */
+    padding: 1rem 5rem;
 }
 
+.badges.coursera a {
+    display: block; /* Makes the anchor element a block to contain the image properly */
+}
+
+.badges.coursera .badge {
+    width: 16rem; /* Makes the image take the full width of the grid column */
+    height: auto; /* Maintains the aspect ratio of the image */
+}
 .certificates .card .image img {
     height: 100%;
     /* border: .4rem solid var(--main-color); */
@@ -724,6 +773,15 @@ span {
     object-fit: cover;
 }
 
+.badge, .certificate {
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.badge:hover, .certificate:hover {
+    transform: scale(1.1); /* Scale up to 110% of the original size on hover */
+}
+
+/* ------------------------------------------ Contact Section ------------------------------------------ */
 .contact {
     min-height: auto;
     height: 90vh;
