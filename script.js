@@ -159,23 +159,3 @@ const swiper = new Swiper('.swiper', {
         prevEl: '.swiper-button-prev',
     },
 });
-
-document.addEventListener("DOMContentLoaded", function() {
-    // Select the iframe within the .badge once it's available
-    var iframeObserver = new MutationObserver(function(mutations) {
-        mutations.forEach(function(mutation) {
-            mutation.addedNodes.forEach(function(node) {
-                if (node.tagName === 'IFRAME') {
-                    node.style.height = '100%';
-                    node.style.width = 'auto'; // Or set a specific width
-                    iframeObserver.disconnect(); // Stop observing once the iframe is styled
-                }
-            });
-        });
-    });
-
-    var badgeDiv = document.querySelector('.badge'); // Adjust the selector as needed
-    if (badgeDiv) {
-        iframeObserver.observe(badgeDiv, { childList: true });
-    }
-});
