@@ -713,12 +713,9 @@ span {
 
 .portfolio-container .portfolio-box {
     position: relative;
-    border-radius: 2rem;
+    border-radius: 1rem;
     overflow: hidden;
     display: flex;
-}
-.portfolio-container .animate.scroll {
-    width: 105%;
 }
 
 .portfolio-box img {
