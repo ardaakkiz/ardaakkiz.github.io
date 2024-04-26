@@ -401,10 +401,15 @@ span {
     padding: 2rem; /* Adjust padding as needed */
     overflow: hidden; /* Hide any content that overflows */
     height: 85%; /* Limit height to avoid out-of-bounds content on small screens */
+    justify-content: center;
 }
 
+.about-content .swiper-slide p {
+    font-size: 1.6rem;
+    margin: 1rem;    
+}
 
-.swiper-container.read-more {
+.swiper-slide.read-more {
     width: 100%;
     height: 100%;
 }
@@ -412,24 +417,6 @@ span {
 .swiper-slide.read-more {
     text-align: justify;
     padding: 20px;
-}
-
-/* Text Container Style */
-.text-columns {
-    column-count: 2; /* Create two columns */
-    column-gap: 6rem; /* Space between columns */
-    position: relative; /* Needed for the pseudo-element (vertical line) positioning */
-    padding: 2rem 2rem; /* Padding on sides */
-}
-
-.text-columns::after {
-    content: ''; /* Required for pseudo-elements */
-    position: absolute;
-    left: 50%; /* Position at the halfway point */
-    top: 0;
-    bottom: 0;
-    border-left: 2px solid var(--bg-color); /* Vertical line */
-    transform: translateX(-50%); /* Center the line */
 }
 
 /* The Close Button */
@@ -682,146 +669,118 @@ span {
 .certificates {
     min-height: auto;
     background: var(--bg-color);
-    padding-bottom: 7rem;
+    padding: 7rem 9% 7rem;
 }
 
 .certificates h2 {
-    display: inline-block;
-    left: 50%;
-    transform: translateX(-50%);
-    margin: 6rem 0;
+    text-align: center;
+    margin: 3rem 0;
 }
 
-.certificates-container {
+.mySwiper {
+    width: 100%;
+    height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow-y: visible;
 }
 
-.certificates .card {
-    position: relative;
-    z-index: 1;
+.card {
     display: flex;
-    align-items: center; /* Vertically center the content */
-    justify-content: center; /* Horizontally center the content */
+    justify-content: center;
+    align-items: center;
+    padding: 0 5rem;
+    margin: auto;
 }
 
-.certificates .card .image {
-    border-radius: .6rem;
-    height: 60vh;
-    display: flex; /* Make the image container a flex container */
-    align-items: center; /* Vertically center the content */
-    justify-content: center; /* Horizontally center the content */
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.certificates .card .image a {
-    height: 90%;
+
+.image, .badges {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
-.certificate {
-    max-height: 90%;
-}
-.certificates .card .badges {
-    border-radius: .6rem;
-    height: 60vh;
-    display: flex; /* Make the image container a flex container */
+
+.badges.coursera, .badges.aws {
+    display: flex;
     flex-wrap: wrap;
-    align-items: center; /* Vertically center the content */
-    justify-content: center; /* Horizontally center the content */
-    gap: 10px;
-}
-.badges.aws {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.badges.aws .badge {
-    height: 20vh;
-}
-.badges.coursera {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Creates 4 columns of equal width */
-    grid-gap: 20px; /* Adjust the space between grid items */
-    justify-content: center; /* Center the grid horizontally */
-    align-items: center; /* Align the grid items vertically */
-    padding: 1rem 5rem;
-}
-
-.badges.coursera a {
-    display: block; /* Makes the anchor element a block to contain the image properly */
+    flex-direction: row;
 }
 
 .badges.coursera .badge {
-    width: 16rem; /* Makes the image take the full width of the grid column */
-    height: auto; /* Maintains the aspect ratio of the image */
+    max-width: 200px;
 }
-.certificates .card .image img {
-    height: 100%;
-    /* border: .4rem solid var(--main-color); */
-    /* border-radius: 2rem; */
-    object-fit: cover;
+.badges.aws .badge {
+    max-width: 200px;
 }
 
 .badge, .certificate {
-    transition: transform 0.3s ease; /* Smooth transition for scaling */
+    width: 100%;
+    max-width: 600px; /* Sets a max width for images to not exceed */
+    height: auto; /* Keeps aspect ratio */
+    max-height: 60vh;
+    transition: transform .3s ease;
 }
 
 .badge:hover, .certificate:hover {
-    transform: scale(1.1); /* Scale up to 110% of the original size on hover */
+    transform: scale(1.05); /* Slightly enlarges the badge on hover */
+}
+
+.swiper-button-prev, .swiper-button-next {
+    color: var(--main-color);
+}
+
+.swiper-pagination-bullet {
+    background: var(--main-color);
 }
 
 /* ------------------------------------------ Portfolio Section ------------------------------------------ */
 .portfolio {
-    min-height: auto;
     padding-bottom: 7rem;
     background-color: var(--second-bg-color);
 }
 
 .portfolio h2 {
-    position: inline-block;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-bottom: 4rem;
+    text-align: center; /* Centers the heading on all devices */
+    margin-bottom: 3rem; /* Ensures consistent spacing */
 }
 
 .portfolio-container {
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    align-items: center;
+    align-items: start; /* Aligns items at the start of each cell */
     gap: 2.5rem;
 }
 
-.portfolio-container .portfolio-box {
+.portfolio-box {
     position: relative;
     border-radius: 1rem;
     overflow: hidden;
     display: flex;
+    flex-direction: column; /* Stacks content vertically */
 }
 
-.portfolio-box img {
+.portfolio-box img, .portfolio-box video {
     width: 100%;
+    height: auto; /* Ensures the aspect ratio is maintained */
     transition: .5s ease;
 }
 
-.portfolio-box:hover img {
-    transform: scale(1.07);
-}
-
-.portfolio-box video {
-    width: 100%;
-    transition: .5s ease;
-}
-
-.portfolio-box:hover video {
-    transform: scale(1.07);
+.portfolio-box:hover img, .portfolio-box:hover video {
+    transform: scale(1.07); /* Slightly enlarges the media on hover */
 }
 
 .portfolio-box .portfolio-layer {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
+    right: 0; /* Ensures it spans the full width of the box */
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, .5), var(--main-color));
+    background: linear-gradient(rgba(0, 0, 0, .75), var(--main-color));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -829,7 +788,7 @@ span {
     text-align: center;
     padding: 0 4rem;
     transform: translateY(100%);
-    transition: .5s ease;
+    transition: transform .5s ease;
 }
 .portfolio-box:hover .portfolio-layer {
     transform: translateY(0);
@@ -843,7 +802,6 @@ span {
     font-size: 1.6rem;
     margin: .3rem 0 1rem;
 }
-
 .portfolio-layer a {
     display: inline-flex;
     justify-content: center;
@@ -1067,9 +1025,31 @@ section:nth-child(odd) .animate.scroll
 
 /* Breakpoints */
 
+@media (max-width: 1600px) {
+    .badges.coursera .badge {
+        max-width: 150px;
+    }
+
+    .portfolio-layer h4 {
+        font-size: 2rem;
+    }
+    .portfolio-layer p {
+        font-size: 1rem;
+    }.portfolio-layer a {
+        width: 3rem;
+        height: 3rem;
+    }
+    .portfolio-layer a i {
+        font-size: 1.5rem;
+    }
+}
+
 @media (max-width: 1200px) {
     html {
         font-size: 55%;
+    }
+    .close-btn {
+        top: 9%;
     }
 }
 
@@ -1096,6 +1076,10 @@ section:nth-child(odd) .animate.scroll
     
     .certificates .card .badges {
         gap: 0;
+    }
+
+    .badges.coursera .badge {
+        max-width: 120px;
     }
 }
 
@@ -1206,11 +1190,48 @@ section:nth-child(odd) .animate.scroll
     .skills-box .skills-content {
         padding: 1rem;
     }
+    .portfolio-container {
+        grid-template-columns: repeat(2,1fr);
+        gap: 1.5rem;
+    }
+    .portfolio-layer h4 {
+        font-size: 2.2rem;
+    }
+    .portfolio-layer p {
+        font-size: 1.2rem;
+    }.portfolio-layer a {
+        width: 4rem;
+        height: 4rem;
+    }
+    .portfolio-layer a i {
+        font-size: 1.5rem;
+    }
 }
 
 @media (max-width: 670px) {
     html {
         font-size: 52.5%;
+    }
+    .close-btn {
+        top: 8%;
+    }
+    .badges.aws .badge {
+        max-width: 150px;
+    }
+    .badges.coursera .badge {
+        max-width: 100px;
+    }
+    .portfolio-layer h4 {
+        font-size: 1.8rem;
+    }
+    .portfolio-layer p {
+        font-size: 1rem;
+    }.portfolio-layer a {
+        width: 3rem;
+        height: 3rem;
+    }
+    .portfolio-layer a i {
+        font-size: 1.2rem;
     }
 }
 
@@ -1224,9 +1245,6 @@ section:nth-child(odd) .animate.scroll
         flex-direction: column;
     }
 
-    .home-sci {
-        width: 160px;
-    }
 
     .home-sci a {
         width: 38px;
@@ -1236,6 +1254,19 @@ section:nth-child(odd) .animate.scroll
     .education h2 {
         margin-top: 3rem;
         margin-bottom: 2rem;
+    }
+
+    .portfolio-layer h4 {
+        font-size: 1.5rem;
+    }
+    .portfolio-layer p {
+        font-size: 0.8rem;
+    }.portfolio-layer a {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    .portfolio-layer a i {
+        font-size: 1rem;
     }
 }
 
@@ -1260,6 +1291,25 @@ section:nth-child(odd) .animate.scroll
         margin-top: 2rem;
         text-align: center;
     }
+    .badges.coursera .badge {
+        max-width: 90px;
+    }
+    .badges.aws .badge {
+        max-width: 130px;
+    }
+
+    .portfolio-layer h4 {
+        font-size: 1rem;
+    }
+    .portfolio-layer p {
+        font-size: 0.6rem;
+    }.portfolio-layer a {
+        width: 2rem;
+        height: 2rem;
+    }
+    .portfolio-layer a i {
+        font-size: 0.8rem;
+    }
 }
 
 @media (max-width: 371px) {
@@ -1276,6 +1326,14 @@ section:nth-child(odd) .animate.scroll
 
     .home-content h1 {
         font-size: 5rem;
+    }
+    .portfolio h2 {
+        margin-bottom: 1rem;
+    }
+    .portfolio-container {
+        grid-template-columns: repeat(1,1fr);
+        gap: 0.5rem;
+        margin: auto 9rem
     }
 }
 
