@@ -90,7 +90,7 @@ section {
     display: flex;
     align-items: center;
     padding: 0 9%;
-    background: url('/images/home.png') no-repeat;
+    background: url('/images/home2.png') no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -287,7 +287,7 @@ section {
 
 .home-imgHover:hover {
     background: var(--bg-color);
-    opacity: .8;
+    opacity: .6;
 }
 
 /* ------------------------------------------ About Section ------------------------------------------ */
@@ -367,6 +367,90 @@ span {
 .btn-box.btns a::before {
     background: var(--second-bg-color);
 }
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    opacity: 0; /* Start with no opacity */
+    transition: opacity 0.5s ease; /* Smooth transition for the opacity */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    max-width: 100%;
+    height: 100%; /* Full height */
+    max-height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Class to be added for showing the modal */
+.modal.show {
+    display: block; /* Display the modal */
+    opacity: 1; /* Full opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: var(--second-bg-color);
+    margin: 8rem auto 0; /* 10% from the top and centered */
+    border: 1px solid #888;
+    width: 95%; /* Could be more or less, depending on screen size */
+    border-radius: 10px; /* Optional: for rounded corners */
+    padding: 2rem; /* Adjust padding as needed */
+    overflow: hidden; /* Hide any content that overflows */
+    height: 85%; /* Limit height to avoid out-of-bounds content on small screens */
+}
+
+
+.swiper-container.read-more {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide.read-more {
+    text-align: justify;
+    padding: 20px;
+}
+
+/* Text Container Style */
+.text-columns {
+    column-count: 2; /* Create two columns */
+    column-gap: 6rem; /* Space between columns */
+    position: relative; /* Needed for the pseudo-element (vertical line) positioning */
+    padding: 2rem 2rem; /* Padding on sides */
+}
+
+.text-columns::after {
+    content: ''; /* Required for pseudo-elements */
+    position: absolute;
+    left: 50%; /* Position at the halfway point */
+    top: 0;
+    bottom: 0;
+    border-left: 2px solid var(--bg-color); /* Vertical line */
+    transform: translateX(-50%); /* Center the line */
+}
+
+/* The Close Button */
+.close-btn {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    z-index: 2;
+    position: absolute;
+    right: 3.5%;
+    top: 11%;
+
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 
 /* ------------------------------------------ Education Section ------------------------------------------ */
 .education {
@@ -605,19 +689,14 @@ span {
     display: inline-block;
     left: 50%;
     transform: translateX(-50%);
+    margin: 6rem 0;
 }
 
 .certificates-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 6rem;
     overflow-y: visible;
-}
-
-.swiper {
-    width: 60vw;
-    height: 60vh;
 }
 
 .certificates .card {
@@ -630,7 +709,7 @@ span {
 
 .certificates .card .image {
     border-radius: .6rem;
-    height: 52vh;
+    height: 60vh;
     display: flex; /* Make the image container a flex container */
     align-items: center; /* Vertically center the content */
     justify-content: center; /* Horizontally center the content */
@@ -1010,9 +1089,41 @@ section:nth-child(odd) .animate.scroll
     .footer {
         padding: 2rem 4%;
     }
+
+    .skills .skills-row {
+        gap: 3rem;
+    }
+    
+    .certificates .card .badges {
+        gap: 0;
+    }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 813px) {
+    .education {
+        padding-top: 8rem;
+    }
+    .education-content .content {
+        max-height: 11.5rem;
+        text-overflow: clip;
+        overflow: auto;
+    }
+    .education-content {
+        text-overflow: ellipsis;
+    }
+    .education .education-row {
+        row-gap: 1rem;
+    }
+    .education h2 {
+        margin-top: 5rem;
+        margin-bottom: 0rem;
+    }
+    .education h3.title {
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media (max-width: 830px) {
     .header {
         background: var(--bg-color);
     }
@@ -1078,6 +1189,31 @@ section:nth-child(odd) .animate.scroll
     }
 }
 
+/* for skills section */
+@media (max-width: 793px) {
+    .skills h2 {
+        margin-bottom: 2rem;
+    }
+    .skills-column .title {
+        display: none;
+    }
+    .skills .skills-row {
+        row-gap: 2rem;
+    }
+    .skills-content .progress {
+        padding: 0;
+    }
+    .skills-box .skills-content {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 670px) {
+    html {
+        font-size: 52.5%;
+    }
+}
+
 @media (max-width: 520px) {
     html {
         font-size: 50%;
@@ -1096,6 +1232,11 @@ section:nth-child(odd) .animate.scroll
         width: 38px;
         height: 38px;
     }
+
+    .education h2 {
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
 }
 
 @media (max-width: 462px) {
@@ -1104,7 +1245,7 @@ section:nth-child(odd) .animate.scroll
     }
     
     .education {
-        padding: 10rem 4% 5rem 5%;
+        padding: 8rem 4% 5rem 5%;
     }
 
     .contact form .input-box .input-field {
